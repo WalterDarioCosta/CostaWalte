@@ -14,7 +14,7 @@
                 <tr *ngFor="let Educacion of educacion">
                     <td>
                         <h2>{{Educacion.nombreE}}</h2>
-                    </td><br>
+                    </td>
                     <td>{{Educacion.descripcionE}}</td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
