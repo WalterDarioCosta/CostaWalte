@@ -4,8 +4,8 @@
         class="img-fluid" id="fotoperfil">
     </div>
     <div class="col-xs-12 col sm-2 col-md-2 col-lg-2">
-        <p id="nombre">{{persona.apellido}} {{persona.nombre}} </p>
-        <p> Desarrollador Jr</p>
+       <h4> <p id="nombre">{{persona.apellido}} {{persona.nombre}} </p></h4>
+      <h6> <p> Desarrollador Jr</p></h6>
     </div>
     <div class="col-xs-12 col sm-8 col-md-8 col-lg-8">
        
@@ -20,7 +20,7 @@
                     <tbody>
                         <tr *ngFor="let Acerca of acerca">
                            
-                            <td>{{Acerca.descripcionE}}</td>
+                            <td><h6>{{Acerca.descripcionE}}</h6></td>
                             <td *ngIf="isLogged">
                                 <button class="btn btn-light" routerLink="/editace/{{Acerca.id}}">
                                     <i class="bi bi-pencil-fill"></i> EDITAR</button>
