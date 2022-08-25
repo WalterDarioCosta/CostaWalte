@@ -8,10 +8,32 @@
         <p> Desarrollador Jr</p>
     </div>
     <div class="col-xs-12 col sm-8 col-md-8 col-lg-8">
-       <span>
-           <h1>Acerca de Mi</h1>
-           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum praesentium, molestiae est vitae nisi quam nemo deleniti maiores commodi ratione accusantium, iste aut tempore perspiciatis aliquid dolor non voluptates consectetur.</p> 
-       </span> 
+       
+       
+       
+        <div class="row">
+            <h1>Acerca de Mi</h1>
+                    
+            <div class="col lg 1"></div>
+            <div class="col-lg-11">
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let Acerca of acerca">
+                           
+                            <td>{{Acerca.descripcionE}}</td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-light" routerLink="/editace/{{Acerca.id}}">
+                                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        </div>
+
+       
     </div>
 </div>
 
