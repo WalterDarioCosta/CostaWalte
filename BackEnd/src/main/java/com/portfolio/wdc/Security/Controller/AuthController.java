@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin
+@CrossOrigin(origins = "https://frontendwdc.web.app")
 public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -47,6 +47,9 @@ public class AuthController {
     @Autowired
     JwtProvider jwtProvider;
     
+    
+    
+   
     @PostMapping("/nuevo")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())
@@ -72,6 +75,7 @@ public class AuthController {
         return new ResponseEntity(new Mensaje("Usuario guardado"),HttpStatus.CREATED);
     }
     
+
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())

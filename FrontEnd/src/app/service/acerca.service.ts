@@ -7,7 +7,7 @@ import { Acerca } from '../model/acerca';
   providedIn: 'root'
 })
 export class AcercaService {
-  URL = 'http://localhost:8080/acerca/';
+  URL = 'https://backendwdc.herokuapp.com/acerca/';
   constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Acerca[]>{
